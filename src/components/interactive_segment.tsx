@@ -130,7 +130,7 @@ export function InteractiveSegment(
             imageDataMask.data.fill(255)
             for (let i = 0; i < masks.length; i++) {
                 const mask = masks[i]
-                if (mask.area / (width * height) > maskAreaThreshold) {
+                if (mask.area / (width * height) >= maskAreaThreshold) {
                     continue
                 }
                 const segmentation = segments[i]
