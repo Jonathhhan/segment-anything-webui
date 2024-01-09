@@ -145,9 +145,9 @@ export function InteractiveSegment(
                         imageData.data[index] = imageData.data[index] * opacity + rgba[0] * (1 - opacity);
                         imageData.data[index + 1] = imageData.data[index + 1] * opacity + rgba[1] * (1 - opacity);
                         imageData.data[index + 2] = imageData.data[index + 2] * opacity + rgba[2] * (1 - opacity);
-                        imageDataMask.data[index] = opacity
-                        imageDataMask.data[index + 1] = opacity
-                        imageDataMask.data[index + 2] = opacity
+                        imageDataMask.data[index] = rgba[0];
+                        imageDataMask.data[index + 1] = rgba[1];
+                        imageDataMask.data[index + 2] = rgba[2];
                     }
                 }
             }
